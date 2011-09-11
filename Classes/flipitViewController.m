@@ -10,6 +10,7 @@
 
 @interface NSString (Extended)
 -(NSString *)reverseString;
+-(NSMutableString *)flipString;
 @end
 
 @implementation NSString (Extended)
@@ -25,11 +26,8 @@
     }
     return rtr;
 }
-@end
-
-@implementation flipitViewController
-
-- (void) flipIt: (id) sender {
+-(NSString *) flipString
+{
     static const NSInteger N_ENTRIES = 24;
     NSDictionary *replaceDict;
     //NSString *keyArray[N_ENTRIES];
@@ -103,14 +101,23 @@
     
     replaceDict = [NSDictionary dictionaryWithObjects:(id *)valueArray
                                               forKeys:(id *)keyArray count:N_ENTRIES];
-    
-    
-    NSString *origText = orig.text;
-    NSMutableString *fliptxt = [origText mutableCopy];
+    NSMutableString *fliptxt = [self mutableCopy];
     for (NSString *target in replaceDict) {
         [fliptxt replaceOccurrencesOfString:target withString:[replaceDict objectForKey:target] 
                                     options:0 range:NSMakeRange(0, [fliptxt length])];
     }
+    return fliptxt;
+}
+
+@end
+
+@implementation flipitViewController
+
+- (void) flipIt: (id) sender {
+    
+    NSString *origText = orig.text;
+    NSMutableString *fliptxt = [origText flipString];
+    
     flipped.text = [fliptxt reverseString];
     //orig.text = @"" ;
 }
