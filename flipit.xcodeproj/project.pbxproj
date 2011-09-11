@@ -15,6 +15,10 @@
 		2899E5220DE3E06400AC0155 /* flipitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* flipitViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* flipitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* flipitViewController.m */; };
+		42C27267141CB85E009A86A2 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42C27266141CB85E009A86A2 /* iAd.framework */; };
+		42C2728C141CC897009A86A2 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C27289141CC897009A86A2 /* icon-72.png */; };
+		42C2728D141CC897009A86A2 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C2728A141CC897009A86A2 /* icon.png */; };
+		42C2728E141CC897009A86A2 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42C2728B141CC897009A86A2 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		28D7ACF70DDB3853001CB0EB /* flipitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flipitViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* flipit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flipit_Prefix.pch; sourceTree = "<group>"; };
+		42C27266141CB85E009A86A2 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		42C27289141CC897009A86A2 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-72.png"; sourceTree = "<group>"; };
+		42C2728A141CC897009A86A2 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		42C2728B141CC897009A86A2 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* flipit-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "flipit-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +49,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				42C27267141CB85E009A86A2 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +99,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				42C27289141CC897009A86A2 /* icon-72.png */,
+				42C2728A141CC897009A86A2 /* icon.png */,
+				42C2728B141CC897009A86A2 /* icon@2x.png */,
 				2899E5210DE3E06400AC0155 /* flipitViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* flipit-Info.plist */,
@@ -103,6 +115,7 @@
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+				42C27266141CB85E009A86A2 /* iAd.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +171,9 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* flipitViewController.xib in Resources */,
+				42C2728C141CC897009A86A2 /* icon-72.png in Resources */,
+				42C2728D141CC897009A86A2 /* icon.png in Resources */,
+				42C2728E141CC897009A86A2 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

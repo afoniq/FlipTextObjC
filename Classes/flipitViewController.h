@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
 @interface flipitViewController : UIViewController {
     IBOutlet UITextView* orig;
@@ -18,6 +19,7 @@
 
 - (IBAction) flipIt: (id) sender;
 - (IBAction) hideKbd: (id) sender;
+- (IBAction) sendMail: (id) sender;
 
 
 @end

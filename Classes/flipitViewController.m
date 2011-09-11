@@ -28,7 +28,7 @@
 }
 -(NSString *) flipString
 {
-    static const NSInteger N_ENTRIES = 24;
+    static const NSInteger N_ENTRIES = 36;
     NSDictionary *replaceDict;
     //NSString *keyArray[N_ENTRIES];
     //NSNumber *valueArray[N_ENTRIES];
@@ -66,7 +66,17 @@
     NSString *keyArray[] = {@"a", @"b", @"c",
         @"d", @"e", @"f", @"g", @"h", @"i", @"j", @"k", @"l", @"m",
         @"n", @"o", @"p", @"q", @"r", @"s", @"t", @"u", @"v", @"w", 
-        @"x", @"y", @"z"
+        @"x", @"y", @"z",
+        @"1",
+        @"2",
+        @"3",
+        @"4",
+        @"5",
+        @"6",
+        @"7",
+        @"8",
+        @"9",
+        @"0"
     };
     NSString *valueArray[] = {
         @"\u0250", 
@@ -94,7 +104,17 @@
         @"\u028D",
         @"x",
         @"\u028E",
-        @"z"
+        @"z",
+        @"\u21C2",
+        @"\u1105", 
+        @"\u1110", 
+        @"\u3123", 
+        @"\u078E", /* or u03DB */ 
+        @"9", 
+        @"\u3125", 
+        @"8", 
+        @"6", 
+        @"0"
         
     };
     
@@ -117,15 +137,23 @@
     
     NSString *origText = orig.text;
     NSMutableString *fliptxt = [origText flipString];
+    UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+    NSString *flippedTxt = [fliptxt reverseString];
+    flipped.text = flippedTxt;
+    [orig resignFirstResponder];
+    [flipped resignFirstResponder];  
+    pasteboard.string = flippedTxt;
     
-    flipped.text = [fliptxt reverseString];
-    //orig.text = @"" ;
 }
 
 
 - (void) hideKbd: (id) sender{
     [orig resignFirstResponder];
     [flipped resignFirstResponder];
+}
+
+- (IBAction) sendMail: (id) sender{
+
 }
 
 
@@ -151,12 +179,15 @@
 */
 
 
-/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *origText = orig.text;
+    NSMutableString *fliptxt = [origText flipString];
+    
+    flipped.text = [fliptxt reverseString];
+    
 }
-*/
 
 
 /*
