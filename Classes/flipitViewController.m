@@ -195,11 +195,12 @@
 }
 
 - (void) sendMail: (id) sender{
-    NSString *mailString = [NSString stringWithFormat:@"mailto:?to=%@&subject=%@&body=%@",
-                            @"",
-                            @"Flipped text",
-                            flipped.text
-                            ];
+    
+    NSString *body = [flipped.text stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    NSString *mailString = [NSString stringWithFormat:@"mailto:?body=%@",
+                  body
+                  ];
+    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailString]];
     
 
