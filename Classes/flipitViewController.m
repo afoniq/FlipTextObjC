@@ -194,7 +194,14 @@
     [flipped resignFirstResponder];
 }
 
-- (IBAction) sendMail: (id) sender{
+- (void) sendMail: (id) sender{
+    NSString *mailString = [NSString stringWithFormat:@"mailto:?to=%@&subject=%@&body=%@",
+                            @"",
+                            @"Flipped text",
+                            flipped.text
+                            ];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:mailString]];
+    
 
 }
 
